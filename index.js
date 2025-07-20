@@ -1,3 +1,4 @@
+require('dotenv').config();
 
 const express = require('express');
 const app = express();
@@ -5,12 +6,13 @@ app.use(express.static('public'));
 const mongoose = require("mongoose");
 const UserModel = require('./models/user');
 var connectionUrl = process.env.MONGO_URI || "mongodb://localhost:27017/school";
+const sessionSecret = process.env.SESSION_SECRET;
 const session = require('express-session');
 const bcrypt = require('bcrypt')
 const studentTrip = require('./models/studentTrip');
 
 app.use(session({
-    secret:'wamama23456##ukweliwananguvu',
+    secret:'sessionSecret',
     resave: false,
     saveUninitialized:false
 }));
