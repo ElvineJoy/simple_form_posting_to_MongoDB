@@ -4,7 +4,7 @@ const app = express();
 app.use(express.static('public'));
 const mongoose = require("mongoose");
 const UserModel = require('./models/user');
-var connectionUrl = "mongodb://localhost:27017/school";
+var connectionUrl = process.env.MONGO_URI || "mongodb://localhost:27017/school";
 const session = require('express-session');
 const bcrypt = require('bcrypt')
 const studentTrip = require('./models/studentTrip');
