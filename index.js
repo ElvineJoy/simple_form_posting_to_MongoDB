@@ -32,7 +32,7 @@ async function startServer() {
 
         // routes
         app.get("/", (req, res) => {
-             res.send("Welcome to the Student Trip App! Visit /login to get started.");
+             res.render("landing");
             });
 
         app.get("/home", async(req, res) => {
