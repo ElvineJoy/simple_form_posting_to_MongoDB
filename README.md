@@ -3,7 +3,7 @@
   -  User registration form
   -  Login form
   -  Form to add details of students who have paid for upcoming trips.
-  -  
+    
 ## The NoSQL db of choice is *MongoDB*.
 # Tech Stack
   - Node js
