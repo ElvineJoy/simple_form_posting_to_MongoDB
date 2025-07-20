@@ -31,6 +31,10 @@ async function startServer() {
         app.set("view engine", "ejs")
 
         // routes
+        app.get("/", (req, res) => {
+             res.send("Welcome to the Student Trip App! Visit /login to get started.");
+            });
+
         app.get("/home", async(req, res) => {
             if (!req.session.teacherId) return res.redirect('/login');
             try{
