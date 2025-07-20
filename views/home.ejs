@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Trip Registration Form</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="logout-container">
+        <a href="/logout" class="logout-button">Logout</a>
+    </div>
+    
+    <h1>Enter Student Details</h1>
+    <% if (typeof message !== 'undefined' && message) { %>
+        <p style="color: green;"><%= message %></p>
+    <% } %>
+
+    <form action="/home" method='POST'>
+        <label>Student Name:</label><br>
+        <input type="text" name="studentName" required><br>
+
+        <label>Grade:</label><br>
+        <input type="text" name="grade" required><br>
+
+        <label>Parent Contact:</label><br>
+        <input type="text" name="parentContact" required><br>
+
+        <label>Trip Date:</label><br>
+        <input type="date" name="tripDate" required><br>
+
+        <label>Amount Paid:</label><br>
+        <input type="number" name="amountPaid" required><br><br>
+
+        <label>Date Paid:</label><br>
+        <input type="date" name="datePaid" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <hr>
+    <h2>Submitted Student details</h2>
+    
+    <% if (typeof students !== 'undefined' && students.length > 0) { %>
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>Student Name</th>
+            <th>Grade</th>
+            <th>Parent Contact</th>
+            <th>Trip Date</th>
+            <th>Amount Paid</th>
+            <th>Date Paid</th>
+        </tr>
+        <% students.forEach(function(student) { %>
+            <tr>
+                <td><%= student.studentName %></td>
+                <td><%= student.grade %></td>
+                <td><%= student.parentContact %></td>
+                <td><%= student.tripDate.toDateString() %></td>
+                <td><%= student.amountPaid %></td>
+                <td><%= student.datePaid.toDateString() %></td>
+            </tr>
+        <% }) %>
+    </table>
+    <% } else { %>
+        <p>No student names submitted yet.</p>
+    <% } %>
+
+
+
+</body>
+</html>

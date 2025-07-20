@@ -1,0 +1,132 @@
+/* General body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Container for form and heading */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Style the form */
+form {
+    background: white;
+    max-width: 450px;
+    margin: 0 auto 40px auto;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Style form labels */
+form label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+/* Style inputs */
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="date"],
+form input[type="number"] {
+    padding: 10px 12px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+/* Focus effect on inputs */
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form input[type="number"]:focus 
+form input[type="password"]:focus{
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Style submit button */
+form button {
+    width: 100%;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 0;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+form button:hover {
+    background-color: #2980b9;
+}
+
+/* Style the submitted table */
+table {
+    width: 90%;
+    margin: 0 auto 40px auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #3498db;
+    color: white;
+    font-weight: 600;
+}
+
+table tr:hover {
+    background-color: #f1f9ff;
+}
+
+/* Message style */
+p {
+    text-align: center;
+    font-weight: 600;
+}
+
+.logout-container {
+    position: fixed; /* fix it relative to viewport */
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.logout-button {
+    background-color: #e74c3c;  /* nice red */
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #c0392b;
+}
